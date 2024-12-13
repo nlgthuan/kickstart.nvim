@@ -21,6 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-surround', -- Better than mini.surround
   {
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
