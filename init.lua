@@ -156,6 +156,8 @@ vim.opt.scrolloff = 10
 -- Greatest keymap evaaaa
 vim.keymap.set('n', '<leader>gl', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
