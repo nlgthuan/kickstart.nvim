@@ -102,7 +102,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('x', '<leader>p', [["_dP]])
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
 vim.keymap.set('n', '<leader>Y', [["+Y]])
-
+vim.keymap.set('n', '<leader>cb', ':%y+<CR>', { noremap = true, silent = true, desc = "[C]opy [B]uffer to clipboard" })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
