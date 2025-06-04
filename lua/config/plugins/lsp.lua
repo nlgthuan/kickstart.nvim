@@ -207,7 +207,13 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-
+        ruby_lsp = {
+            init_options = {
+              formatter = 'standard',
+              linters = { 'standard' },
+            },
+          }
+        ,
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
