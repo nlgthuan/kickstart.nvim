@@ -208,12 +208,11 @@ return {
         -- ts_ls = {},
         --
         ruby_lsp = {
-            init_options = {
-              formatter = 'standard',
-              linters = { 'standard' },
-            },
-          }
-        ,
+          init_options = {
+            formatter = 'standard',
+            linters = { 'standard' },
+          },
+        },
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -226,6 +225,13 @@ return {
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
               -- diagnostics = { disable = { 'missing-fields' } },
             },
+          },
+        },
+        tinymist = {
+          settings = {
+            formatterMode = 'typstyle',
+            exportPdf = 'onType',
+            semanticTokens = 'disable',
           },
         },
       }

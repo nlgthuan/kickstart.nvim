@@ -48,11 +48,11 @@ return { -- Fuzzy Finder (files, lsp, etc)
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
       --
-      -- defaults = {
-      --   mappings = {
-      --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-      --   },
-      -- },
+      defaults = {
+        mappings = {
+          i = { ['<c-q>'] = 'smart_send_to_qflist' },
+        },
+      },
       -- pickers = {}
       extensions = {
         ['ui-select'] = {
@@ -100,5 +100,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sn', function()
       builtin.find_files { cwd = vim.fn.stdpath 'config' }
     end, { desc = '[S]earch [N]eovim files' })
+
+    vim.keymap.set('n', '<leader>sc', function()
+      builtin.find_files {
+        cwd = '~/.config',
+        find_command = { 'find', '.', '-type', 'f', '-not', '-path', '*/[Rr]aycast/*' },
+      }
+    end, { desc = '[S]earch [C]config files' })
   end,
 }

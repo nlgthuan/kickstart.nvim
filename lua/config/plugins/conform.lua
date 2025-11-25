@@ -23,6 +23,7 @@ return { -- Autoformat
       javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       css = { 'prettier' },
+      ['_'] = { 'insert_final_newline' },
     },
   },
 }
